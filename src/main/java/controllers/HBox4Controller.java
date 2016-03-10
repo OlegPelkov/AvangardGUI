@@ -1,12 +1,10 @@
-package main.java.controllers;
+package controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import main.java.controllers.BeakerController;
-
 
 import java.io.IOException;
 import java.net.URL;
@@ -41,7 +39,7 @@ public class HBox4Controller implements Initializable {
          *
          */
 
-        FXMLLoader fxmlLoader =  new FXMLLoader(getClass().getResource("/main/resources/fxml/beaker.fxml"));
+        FXMLLoader fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/beaker.fxml"));
         try {
           beaker_flow_delivery_1 = (AnchorPane) fxmlLoader.load();
 
@@ -51,7 +49,7 @@ public class HBox4Controller implements Initializable {
 
         BeakerController beaker_delivery_1_Controller =  fxmlLoader.getController();
 
-        fxmlLoader =  new FXMLLoader(getClass().getResource("/main/resources/fxml/beaker.fxml"));
+        fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/beaker.fxml"));
         try {
             beaker_flow_delivery_2 = (AnchorPane) fxmlLoader.load();
         } catch (IOException e) {
@@ -61,7 +59,7 @@ public class HBox4Controller implements Initializable {
         BeakerController beaker_delivery_2_Controller =  fxmlLoader.getController();
 
 
-        fxmlLoader =  new FXMLLoader(getClass().getResource("/main/resources/fxml/beaker.fxml"));
+        fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/beaker.fxml"));
         try {
             beaker_flow_delivery_3 = (AnchorPane) fxmlLoader.load();
         } catch (IOException e) {
@@ -72,7 +70,7 @@ public class HBox4Controller implements Initializable {
 
 
 
-        fxmlLoader =  new FXMLLoader(getClass().getResource("/main/resources/fxml/beaker.fxml"));
+        fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/beaker.fxml"));
         try {
             beaker_flow_delivery_4 = (AnchorPane) fxmlLoader.load();
         } catch (IOException e) {
@@ -87,7 +85,7 @@ public class HBox4Controller implements Initializable {
          *
          */
 
-        fxmlLoader =  new FXMLLoader(getClass().getResource("/main/resources/fxml/beaker.fxml"));
+        fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/beaker.fxml"));
         try {
             beaker_flow_recovery_1 = (AnchorPane) fxmlLoader.load();
         } catch (IOException e) {
@@ -96,7 +94,7 @@ public class HBox4Controller implements Initializable {
 
         BeakerController beaker_recovery_1_Controller =  fxmlLoader.getController();
 
-        fxmlLoader =  new FXMLLoader(getClass().getResource("/main/resources/fxml/beaker.fxml"));
+        fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/beaker.fxml"));
         try {
             beaker_flow_recovery_2 = (AnchorPane) fxmlLoader.load();
         } catch (IOException e) {
@@ -105,7 +103,7 @@ public class HBox4Controller implements Initializable {
 
         BeakerController beaker_recovery_2_Controller =  fxmlLoader.getController();
 
-        fxmlLoader =  new FXMLLoader(getClass().getResource("/main/resources/fxml/beaker.fxml"));
+        fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/beaker.fxml"));
         try {
             beaker_flow_recovery_3 = (AnchorPane) fxmlLoader.load();
         } catch (IOException e) {
@@ -114,7 +112,7 @@ public class HBox4Controller implements Initializable {
 
         BeakerController beaker_recovery_3_Controller =  fxmlLoader.getController();
 
-        fxmlLoader =  new FXMLLoader(getClass().getResource("/main/resources/fxml/beaker.fxml"));
+        fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/beaker.fxml"));
         try {
             beaker_flow_recovery_4 = (AnchorPane) fxmlLoader.load();
         } catch (IOException e) {

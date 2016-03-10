@@ -1,4 +1,4 @@
-package main.java.controllers;
+package controllers;
 
 import eu.hansolo.enzo.lcd.Lcd;
 import eu.hansolo.enzo.lcd.LcdBuilder;

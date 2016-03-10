@@ -1,4 +1,4 @@
-package main.java.controllers;
+package controllers;
 
 import eu.hansolo.medusa.Fonts;
 import eu.hansolo.medusa.Gauge;

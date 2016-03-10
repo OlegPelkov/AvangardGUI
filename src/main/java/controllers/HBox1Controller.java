@@ -1,4 +1,4 @@
-package main.java.controllers;
+package controllers;
 
 import eu.hansolo.enzo.lcd.Lcd;
 import eu.hansolo.enzo.lcd.LcdBuilder;
@@ -158,7 +158,7 @@ public class HBox1Controller implements Initializable {
         gauge.setLevel(0.4);
 
         StackPane pane = new StackPane();
-        Image image = new Image("/main/resources/images/oilTank.png", true);
+        Image image = new Image("/images/oilTank.png", true);
         BackgroundImage backgroundImage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER , BackgroundSize.DEFAULT);
         pane.setBackground(new Background(backgroundImage));
         pane.setPrefHeight(100);

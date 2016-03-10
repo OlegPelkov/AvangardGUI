@@ -1,0 +1,62 @@
+group 'fi.stardex.nova'
+version '1.0-SNAPSHOT'
+
+//apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'idea'
+
+//apply plugin: 'org.liquibase.gradle'
+
+def langLevel = 1.8
+
+sourceCompatibility = langLevel
+targetCompatibility = langLevel
+
+repositories {
+
+/*    mavenLocal()
+    mavenCentral()
+    mavenRepo(url: 'http://jcenter.bintray.com')*/
+
+
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    groovyAllVersion = '2.4.6'
+    spockSpringVersion = '1.0-groovy-2.4'
+    springVersion = '4.2.4.RELEASE'
+    springDataVersion = '1.9.2.RELEASE'
+    hibernateEntitymanagerVersion = '5.1.0.Final'
+    mysqlConnectorJavaVersion = '5.1.38'
+    javaeeApi = '7.0'
+    h2Version = '1.4.191'
+    liquibaseVersion = '3.4.2'
+    jfxtrasVersion = '8.0-r4'
+    hansoloMedusaVersion = '4.5'
+    hansoloEnzoVersion = '0.3.6'
+    controlsfxVersion = '8.40.10'
+
+}
+
+dependencies {
+
+    compile "org.jfxtras:jfxtras-labs:$jfxtrasVersion"
+    compile "eu.hansolo:Medusa:$hansoloMedusaVersion"
+    compile "eu.hansolo.enzo:Enzo:$hansoloEnzoVersion"
+    compile "org.controlsfx:controlsfx:$controlsfxVersion"
+
+}
+
+idea {
+    project {
+        jdkName = langLevel
+        languageLevel = langLevel
+    }
+}
