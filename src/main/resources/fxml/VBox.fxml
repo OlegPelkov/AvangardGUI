@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="true" prefHeight="635.0" prefWidth="320.0" style="" styleClass="pane" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox alignment="CENTER" cache="false" fillWidth="false" mouseTransparent="false" prefHeight="635.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <GridPane id="GridPane" alignment="CENTER" hgap="10.0" prefHeight="39.0" prefWidth="285.0" vgap="0.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <RadioButton fx:id="radioButton_Pumps" ellipsisString="" mnemonicParsing="false" prefHeight="27.0" prefWidth="104.0" styleClass="radioButton" stylesheets="@../css/VBox.css" text="Pumps" textFill="#58eeee" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="one" />
+                            </toggleGroup></RadioButton>
+                        <RadioButton fx:id="radioButton_Injectors" mnemonicParsing="false" prefWidth="107.0" styleClass="radioButton" text="Injectors" textFill="#58eeee" toggleGroup="$one" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font></RadioButton>
+                    </children>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="139.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="148.0" />
+                    </columnConstraints>
+                    <padding>
+                        <Insets />
+                    </padding>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <VBox.margin>
+                        <Insets left="10.0" right="5.0" fx:id="x2" />
+                    </VBox.margin>
+                </GridPane>
+                <Group id="Group" scaleX="1.0" scaleY="1.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <TextField fx:id="modelTextField" layoutX="168.0" layoutY="-31.0" prefHeight="20.99990077486291" prefWidth="159.0" styleClass="modelTextField" stylesheets="@../css/VBox.css" text="095000-052#" />
+                        <ListView fx:id="modelList" layoutX="168.0" layoutY="1.0" prefHeight="149.0" prefWidth="159.0" styleClass="modelList" stylesheets="@../css/VBox.css" />
+                        <ListView fx:id="vendorList" layoutX="42.0" layoutY="-31.0" prefHeight="182.0" prefWidth="124.0" styleClass="vendorList" stylesheets="@../css/VBox.css" />
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                    </VBox.margin>
+                </Group>
+                <GridPane id="GridPane" alignment="CENTER" hgap="20.0" padding="$x1" prefHeight="57.0" prefWidth="281.0" vgap="10.0" VBox.margin="$x2" VBox.vgrow="ALWAYS">
+                    <children>
+                        <RadioButton fx:id="radioButton_Manual" mnemonicParsing="false" styleClass="radioButton" text="Manual" textFill="#58eeee" toggleGroup="$one" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font></RadioButton>
+                        <RadioButton fx:id="radioButton_TestPlan" mnemonicParsing="false" styleClass="radioButton" text="TestPlan" textFill="#58eeee" toggleGroup="$one" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font></RadioButton>
+                        <RadioButton fx:id="radioButton_Auto" mnemonicParsing="false" styleClass="radioButton" text="Auto" textFill="#58eeee" toggleGroup="$one" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font></RadioButton>
+                        <RadioButton fx:id="radioButton_Coding" mnemonicParsing="false" styleClass="radioButton" text="Coding" textFill="#58eeee" toggleGroup="$one" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font></RadioButton>
+                    </children>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                </GridPane>
+                <ListView fx:id="testList" pickOnBounds="true" prefHeight="158.0" prefWidth="285.0" styleClass="testList" stylesheets="@../css/VBox.css" VBox.vgrow="ALWAYS">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                    </VBox.margin></ListView>
+                <GridPane alignment="CENTER" prefHeight="75.0" prefWidth="183.0" VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                    </rowConstraints>
+                    <children>
+                        <GridPane alignment="CENTER" prefHeight="43.0" prefWidth="183.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                            <columnConstraints>
+                                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button fx:id="buttonSave" mnemonicParsing="false" prefHeight="27.0" prefWidth="61.0" stylesheets="@../css/VBox.css" text="Save" />
+                                <Button fx:id="buttonReset" mnemonicParsing="false" prefHeight="27.0" prefWidth="61.0" stylesheets="@../css/VBox.css" text="Reset" GridPane.columnIndex="1" />
+                            </children>
+                        </GridPane>
+                        <Button fx:id="buttonSavetoPDF" mnemonicParsing="false" prefHeight="27.0" prefWidth="155.0" stylesheets="@../css/VBox.css" text="Save to PDF" />
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                    </VBox.margin>
+                </GridPane>
+                <GridPane id="GridPane" alignment="CENTER" gridLinesVisible="false" prefHeight="73.0" prefWidth="199.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Label prefWidth="94.0" stylesheets="@../css/VBox.css" text="Adjusting time" textFill="#58eeee" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font></Label>
+                        <Label fx:id="labelAdjustingTime_value" stylesheets="@../css/VBox.css" text="0" textFill="#58eeee" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font></Label>
+                        <Label fx:id="labelMeasuringTime_value" stylesheets="@../css/VBox.css" text="0" textFill="#58eeee" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font></Label>
+                        <CheckBox fx:id="checkBox_EnableTiming" mnemonicParsing="false" styleClass="checkBox" stylesheets="@../css/VBox.css" text="Enable Timing" textFill="#58eeee" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font></CheckBox>
+                        <Label stylesheets="@../css/VBox.css" text="Measuring time" textFill="#58eeee" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font></Label>
+                    </children>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="179.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="7.0" prefWidth="20.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <VBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                    </VBox.margin>
+                </GridPane>
+                <Button fx:id="buttonStart" mnemonicParsing="false" pickOnBounds="true" prefHeight="46.0" prefWidth="154.0" stylesheets="@../css/VBox.css" text="Start" VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin></Button>
+            </children>
+        </VBox>
+    </children>
+    <stylesheets>
+        <URL value="@../css/VBox.css" />
+    </stylesheets>
+</AnchorPane>

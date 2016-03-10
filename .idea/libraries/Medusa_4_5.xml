@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Medusa-4.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Projects/Medusa-4.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
