@@ -2,6 +2,10 @@ package controllers;
 
 import eu.hansolo.enzo.lcd.Lcd;
 import eu.hansolo.enzo.lcd.LcdBuilder;
+import eu.hansolo.medusa.Gauge;
+import eu.hansolo.medusa.GaugeBuilder;
+import eu.hansolo.medusa.Section;
+import eu.hansolo.medusa.skins.SimpleSkin;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -119,10 +123,42 @@ public class HBox1Controller implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-       Lcd lcd = LcdBuilder.create()
+        Gauge temp = GaugeBuilder.create()
+                //.skinType(Gauge.SkinType.SIMPLE)
+                //.skinType(Gauge.SkinType.DASHBOARD)
+                //.skinType(Gauge.SkinType.INDICATOR)
+                .skinType(Gauge.SkinType.KPI)
+                .sections( new Section(0, 100.0, "0", Color.web("#99ff33")))
+                .title("")
+                .unit("")
+                .barBackgroundColor(Color.web("#cc5200"))
+                .barColor(Color.web("#99ff33"))
+                .titleColor(Color.web("#ccff33"))
+                .unitColor(Color.web("#ccff33"))
+                .valueColor(Color.web("#ccff33"))
+                .tickLabelsVisible(false)
+                .sectionTextVisible(false)
+                .tickLabelSectionsVisible(false)
+                .onlyFirstAndLastTickLabelVisible(false)
+                .areaTextVisible(false)
+                .prefSize(170.0,170.0)
+                .thresholdVisible(true)
+                .threshold(80)
+                .animated(true)
+                .build();
+
+        temp.setValue(20.0);
+        temp.setStyle("-fx-font: 10px Tahoma;");
+        /**
+         *
+         *LCD Display
+         *
+         */
+
+        Lcd lcd = LcdBuilder.create()
                 .prefWidth(280)
                 .prefHeight(122)
-                .styleClass(Lcd.STYLE_CLASS_AMBER)
+                .styleClass(Lcd.STYLE_CLASS_BLUE_LIGHTBLUE)
                 .backgroundVisible(true)
                 .value(1299.0)
                 .foregroundShadowVisible(true)
