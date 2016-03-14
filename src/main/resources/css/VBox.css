@@ -9,6 +9,87 @@
 }
 
 /***************
+*progress-bar
+****************/
+
+.progress-bar {
+    -border-color: #4d2600;
+    -fx-background-color: transparent;
+    -fx-border-color: -border-color;
+    -fx-border-radius: 5, 5, 5, 5;
+}
+
+.progress-bar .track{
+    -background-color: #1f1f2e;
+    -fx-background-color: -background-color;
+}
+
+.progress-bar .bar {
+    -fx-background-color: goldenrod;
+    -fx-opacity: 0.8;
+
+}
+
+
+/***************
+*logo
+****************/
+
+.logo {
+
+    -fx-image: url("../images/logo.png");
+
+}
+
+/***************
+*start-stop-button
+****************/
+
+.start-stop-button{
+    -textFont-color: #ddff99;
+    -background-color: #1f1f2e;
+    -border-color: #4d2600;
+    -borderSelect-color: #b35900;
+    -borderHover-color: #b34700;
+    -fx-background-color:  -border-color, transparent ,-background-color;
+    -fx-border-width: 2px ;
+    -fx-font-size: 11pt;
+    -fx-font-family: "Arial";
+    -fx-text-fill:-textFont-color;
+    -fx-opacity: 0.7;
+}
+
+.start-stop-button:hover{
+    -fx-background-color: -borderHover-color ,transparent ,-background-color;
+    -fx-border-width: 2px;
+    -fx-opacity: 1;
+}
+
+.start-stop-button:focused{
+    -fx-background-color: -borderSelect-color , transparent ,-background-color;
+    -fx-border-width: 2px ;
+    -fx-opacity: 1;
+}
+
+.start-stop-button:armed{
+    -fx-background-color: -borderHover-color ,transparent ,-background-color;
+    -fx-background-insets: 0.5 0.5 0.5 0.5, 0, 2, 0.5;
+    -fx-border-width: 2px ;
+    -fx-opacity: 1;
+}
+
+.start-stop-button:selected{
+    -fx-background-color: -borderSelect-color , transparent ,-background-color;
+    -fx-border-width: 2px ;
+    -fx-opacity: 1;
+}
+.start-stop-button:selected:focused {
+   -fx-background-color: -borderSelect-color , transparent ,-background-color;
+   -fx-border-width: 2px ;
+   -fx-opacity: 1;
+}
+
+/***************
 *pump-button
 ****************/
 
@@ -81,7 +162,7 @@
     -fx-opacity: 1;
 }
 
-.led:armed{
+/*.led:armed{
 
     -fx-background-image: url("../images/LED-on.png");
     -fx-opacity: 1;
@@ -91,7 +172,7 @@
 
     -fx-background-image: url("../images/LED-on.png");
     -fx-opacity: 1;
-}
+}*/
 
 .ledBlink-on{
     -fx-background-image: url("../images/LED-on.png");
@@ -996,7 +1077,7 @@
 
      -textFont-color: #ddff99;
      -fx-font-family: "Arial";
-     -fx-font-size: 13;
+     -fx-font-size: 14;
      -fx-text-fill:  -textFont-color;
      -fx-opacity: 0.7;
 

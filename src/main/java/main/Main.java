@@ -1,14 +1,16 @@
 package main;
 
+import controllers.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import org.controlsfx.control.StatusBar;
-import controllers.HBox4Controller;
 
 public class Main extends Application {
+
+    public HBox3Controller hBox3Controller;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -17,54 +19,59 @@ public class Main extends Application {
         StackPane rootLayout = (StackPane) fxmlLoader.load();
 
         fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/VBox.fxml"));
-        AnchorPane leftBoxLayout  = (AnchorPane) fxmlLoader.load();
+        AnchorPane vBoxlayout  = (AnchorPane) fxmlLoader.load();
+
+        VBoxController vBox_Controller = fxmlLoader.getController();
+        vBox_Controller.setMainApp(this);
 
         fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/HBox1.fxml"));
-        StackPane rightBoxLayout1 = (StackPane) fxmlLoader.load();
+        StackPane hBoxLayout1 = (StackPane) fxmlLoader.load();
+
+        HBox1Controller hBox1Controller = fxmlLoader.getController();
 
         fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/HBox2.fxml"));
-        StackPane rightBoxLayout2 = (StackPane) fxmlLoader.load();
+        StackPane hBoxLayout2 = (StackPane) fxmlLoader.load();
+
+        HBox2Controller hBox2Controller = fxmlLoader.getController();
 
         fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/HBox3.fxml"));
-        StackPane rightBoxLayout3 = (StackPane) fxmlLoader.load();
+        hBox3Controller = HBox3Controller.getInstance();
+        fxmlLoader.setController(hBox3Controller);
+        StackPane hBoxLayout3 = (StackPane) fxmlLoader.load();
+
 
         fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/HBox4.fxml"));
-        StackPane rightBoxLayout4 = (StackPane) fxmlLoader.load();
+        StackPane hBoxLayout4 = (StackPane) fxmlLoader.load();
 
-        HBox4Controller hBox4Controller  =  fxmlLoader.getController();
+        HBox4Controller hBox4_Controller  =  fxmlLoader.getController();
 
         fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/VBoxBackground.fxml"));
-        VBox VBoxBackground = (VBox) fxmlLoader.load();
+        VBox vBoxBackground = (VBox) fxmlLoader.load();
 
         fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/HBoxBackground.fxml"));
-        HBox HBoxBackground = (HBox) fxmlLoader.load();
+        HBox hBoxBackground = (HBox) fxmlLoader.load();
 
-        VBoxBackground.getChildren().add(rightBoxLayout1);
-        VBoxBackground.getChildren().add(rightBoxLayout2);
-        VBoxBackground.getChildren().add(rightBoxLayout3);
-        VBoxBackground.getChildren().add(rightBoxLayout4);
+        vBoxBackground.getChildren().add(hBoxLayout1);
+        vBoxBackground.getChildren().add(hBoxLayout2);
+        vBoxBackground.getChildren().add(hBoxLayout3);
+        vBoxBackground.getChildren().add(hBoxLayout4);
 
-        HBoxBackground.getChildren().add(leftBoxLayout);
-        HBoxBackground.getChildren().add(VBoxBackground);
+        hBoxBackground.getChildren().add(vBoxlayout);
+        hBoxBackground.getChildren().add(vBoxBackground);
 
-        HBoxBackground.setHgrow(VBoxBackground, Priority.ALWAYS);
-        VBoxBackground.setVgrow(rightBoxLayout4, Priority.ALWAYS);
+        hBoxBackground.setHgrow(vBoxBackground, Priority.ALWAYS);
+        vBoxBackground.setVgrow(hBoxLayout4, Priority.ALWAYS);
 
-        leftBoxLayout.prefHeightProperty().bind(rootLayout.heightProperty());
-        HBoxBackground.prefHeightProperty().bind(rootLayout.heightProperty());
+        vBoxlayout.prefHeightProperty().bind(rootLayout.heightProperty());
+        hBoxBackground.prefHeightProperty().bind(rootLayout.heightProperty());
 
-        rootLayout.getChildren().add(HBoxBackground);
+        rootLayout.getChildren().add(hBoxBackground);
 
         StatusBar statusBarV = new StatusBar();
         statusBarV.setPrefSize(40.0,40.0);
         statusBarV.setStyle("-fx-background-color: #1f1f2e;");
         statusBarV.setProgress(.5);
-        VBoxBackground.getChildren().add(statusBarV);
-
-      /*  statusBarV.prefHeightProperty().bind(rootLayout.heightProperty().subtract(1200.0));*/
-      /*  rootLayout.getChildren().add(statusBarV);
-        rootLayout.setMargin(statusBarV,new Insets(rootLayout.getHeight()-statusBarV.getHeight(),0.0,0.0,0.0));
-        rootLayout.setAlignment(statusBarV, Pos.BOTTOM_CENTER);*/
+        vBoxBackground.getChildren().add(statusBarV);
 
         Scene scene = new Scene(rootLayout,1280,720);
 

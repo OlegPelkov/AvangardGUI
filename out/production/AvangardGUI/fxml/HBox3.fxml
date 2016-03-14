@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 
-<StackPane prefHeight="116.0" prefWidth="780.0" styleClass="pane" stylesheets="@../css/VBox.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HBox3Controller">
+<StackPane prefHeight="116.0" prefWidth="780.0" styleClass="pane" stylesheets="@../css/VBox.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" >
     <children>
         <HBox alignment="CENTER" fillHeight="true" pickOnBounds="true" prefHeight="160.0" prefWidth="607.0" StackPane.alignment="CENTER">
             <children>
@@ -50,19 +50,13 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
                     </rowConstraints>
                 </GridPane>
-                <GridPane alignment="CENTER" gridLinesVisible="false" prefHeight="112.0" prefWidth="470.0" HBox.hgrow="ALWAYS">
+                <GridPane fx:id="gird_led_beaker" alignment="CENTER" gridLinesVisible="false" prefHeight="112.0" prefWidth="470.0" HBox.hgrow="ALWAYS">
                     <children>
                         <ToggleButton mnemonicParsing="false" prefHeight="102.0" prefWidth="50.0" styleClass="switcher" stylesheets="@../css/VBox.css" GridPane.columnIndex="6" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                             <GridPane.margin>
                                 <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                             </GridPane.margin>
                         </ToggleButton>
-                        <ToggleButton fx:id="led_beaker_1" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" styleClass="led" stylesheets="@../css/VBox.css" text="1" />
-                        <ToggleButton mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" styleClass="led" stylesheets="@../css/VBox.css" text="2" GridPane.columnIndex="1" />
-                        <ToggleButton mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" styleClass="led" stylesheets="@../css/VBox.css" text="3" GridPane.columnIndex="2" />
-                        <ToggleButton mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" styleClass="led" stylesheets="@../css/VBox.css" text="4" GridPane.columnIndex="3" />
-                        <ToggleButton mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" styleClass="led" stylesheets="@../css/VBox.css" text="5" GridPane.columnIndex="4" />
-                        <ToggleButton mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" styleClass="led" stylesheets="@../css/VBox.css" text="6" GridPane.columnIndex="5" />
                     </children>
                     <columnConstraints>
                         <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
