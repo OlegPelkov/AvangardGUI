@@ -23,6 +23,8 @@ public class BeakerController implements Initializable {
     @FXML
     private Ellipse ellipse_top_fuel;
     @FXML
+    private Ellipse ellipse_bottom_fuel;
+    @FXML
     private Arc arc_tick_top_beaker;
     @FXML
     private Arc arc_tick_bottom_beaker;
@@ -37,7 +39,19 @@ public class BeakerController implements Initializable {
 
     private Double beakerRate = 1.0;
 
+    private enum BeakerMode {
+
+        DISABLED, RELATIVE, MARKS_CENTER
+    }
+
+    private BeakerMode beakerMode;
+
+    private Double currentFlowThreadValue;
+
     private final Color DEFAULT_MARK_COLOR = Color.web("#ff1f1f");
+    private final Color DEFAULT_FUEL_FACE_COLOR = Color.web("#1fffb4");
+    private final Color DEFAULT_FUEL_TOP_COLOR = Color.web("#2eb586");
+    private final Color TRANSPARENT_COLOR = Color.web("transparent");
 
     private void setColorMark(String webColor){
 
@@ -48,22 +62,72 @@ public class BeakerController implements Initializable {
 
     }
 
-    public void setStateBeaker(String state){
+    private void setVisibleFuel(boolean visibleFuel){
 
-        if(state.equals("1")){
-            setColorMark("transparent");
+        if(visibleFuel) {
+
+            ellipse_top_fuel.setFill(DEFAULT_FUEL_TOP_COLOR);
+            ellipse_bottom_fuel.setFill(DEFAULT_FUEL_FACE_COLOR);
+            rectangle_fuel.setFill(DEFAULT_FUEL_FACE_COLOR);
+
+        } else {
+
+            ellipse_top_fuel.setFill(TRANSPARENT_COLOR);
+            ellipse_bottom_fuel.setFill(TRANSPARENT_COLOR);
+            rectangle_fuel.setFill(TRANSPARENT_COLOR);
+
+        }
+
+
+    }
+
+    public void  setBeakerMode(String mode){
+
+        switch (mode){
+            case "DISABLED" : {
+                beakerMode = BeakerMode.DISABLED;
+                setDisabledMode();
+            } break;
+
+            case "RELATIVE" : {
+                beakerMode = BeakerMode.RELATIVE;
+                setRelativeMode();
+            } break;
+
+            case "MARKS_CENTER" : {
+                beakerMode = BeakerMode.MARKS_CENTER;
+                setMarksCenterMode();
+            } break;
         }
 
     }
 
-    public void setFuelLevelBeaker(double FlowThread){
+    public void startTest(){
 
-        double oldFuelHeight;
-        oldFuelHeight = rectangle_fuel.getHeight();
-        rectangle_fuel.setHeight(FlowThread*this.beakerRate);
-        beaker_pane.setTopAnchor(rectangle_fuel,beaker_pane.getTopAnchor(rectangle_fuel)+oldFuelHeight-rectangle_fuel.getHeight());
-        beaker_pane.setTopAnchor(ellipse_top_fuel,beaker_pane.getTopAnchor(rectangle_fuel)-ellipse_top_fuel.getRadiusY());
 
+    }
+
+
+    public void setFuelLevelBeaker(double flowThread){
+
+        if(beakerMode==BeakerMode.DISABLED) {
+            flowThread =0.0;
+        }
+
+        /**
+         * if flowThread out of border
+         * */
+        if((flowThread*beakerRate)>(rectangle_beaker.getHeight()-ellipse_top_fuel.getRadiusY())){
+            flowThread = (rectangle_beaker.getHeight()-ellipse_top_fuel.getRadiusY())/this.beakerRate;
+        }
+
+         double oldFuelHeight;
+
+         currentFlowThreadValue = flowThread;
+         oldFuelHeight = rectangle_fuel.getHeight();
+         rectangle_fuel.setHeight(flowThread * this.beakerRate);
+         beaker_pane.setTopAnchor(rectangle_fuel, beaker_pane.getTopAnchor(rectangle_fuel) + oldFuelHeight - rectangle_fuel.getHeight());
+         beaker_pane.setTopAnchor(ellipse_top_fuel, beaker_pane.getTopAnchor(rectangle_fuel) - ellipse_top_fuel.getRadiusY());
     }
 
     public void calculateBeakerPropeties(double initFlowThread){
@@ -93,16 +157,40 @@ public class BeakerController implements Initializable {
 
     }
 
+    private void setDisabledMode(){
+
+        setColorMark("transparent");
+        setVisibleFuel(false);
+
+
+    }
+
+    private void setRelativeMode(){
+
+        setColorMark("transparent");
+        setFuelLevelBeaker(currentFlowThreadValue);
+        setVisibleFuel(true);
+
+
+    }
+
+    private void setMarksCenterMode(){
+
+        setColorMark(DEFAULT_MARK_COLOR.toString());
+        setFuelLevelBeaker(currentFlowThreadValue);
+        setVisibleFuel(true);
+
+
+    }
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        arc_tick_top_beaker.setStroke(DEFAULT_MARK_COLOR);
-        arc_tick_bottom_beaker.setStroke(DEFAULT_MARK_COLOR);
-        text_top_beaker.fillProperty().set(DEFAULT_MARK_COLOR);
-        text_bottom_beaker.fillProperty().set(DEFAULT_MARK_COLOR);
-        setStateBeaker("0");
+        currentFlowThreadValue = 0.0;
         calculateBeakerPropeties(140.0);
-        setFuelLevelBeaker(40);
+        setBeakerMode("DISABLED");
+
 
     }
 

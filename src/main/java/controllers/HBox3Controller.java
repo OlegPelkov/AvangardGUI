@@ -5,8 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.StackPane;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,7 +15,7 @@ public class HBox3Controller  implements Initializable {
 
     /**
      *
-     * Make as singltone
+     * Make as singeltone
      *
      * */
     private static HBox3Controller instance = null;
@@ -52,8 +50,6 @@ public class HBox3Controller  implements Initializable {
     public LedController led_beaker_4_Controller;
     public LedController led_beaker_5_Controller;
     public LedController led_beaker_6_Controller;
-
-
 
 
     @Override
@@ -142,6 +138,7 @@ public class HBox3Controller  implements Initializable {
         gird_led_beaker.add(led_beaker_4,3,0);
         gird_led_beaker.add(led_beaker_5,4,0);
         gird_led_beaker.add(led_beaker_6,5,0);
+
 
 
     }

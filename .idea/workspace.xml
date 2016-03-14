@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AvangardGUI/controllers/BeakerController.class" afterPath="$PROJECT_DIR$/out/production/AvangardGUI/controllers/BeakerController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AvangardGUI/controllers/HBox3Controller.class" afterPath="$PROJECT_DIR$/out/production/AvangardGUI/controllers/HBox3Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AvangardGUI/controllers/HBox4Controller.class" afterPath="$PROJECT_DIR$/out/production/AvangardGUI/controllers/HBox4Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AvangardGUI/controllers/VBoxController$1.class" afterPath="$PROJECT_DIR$/out/production/AvangardGUI/controllers/VBoxController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AvangardGUI/controllers/VBoxController$2.class" afterPath="$PROJECT_DIR$/out/production/AvangardGUI/controllers/VBoxController$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AvangardGUI/controllers/VBoxController$3.class" afterPath="$PROJECT_DIR$/out/production/AvangardGUI/controllers/VBoxController$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AvangardGUI/controllers/VBoxController.class" afterPath="$PROJECT_DIR$/out/production/AvangardGUI/controllers/VBoxController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AvangardGUI/main/Main.class" afterPath="$PROJECT_DIR$/out/production/AvangardGUI/main/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AvangardGUI/fxml/HBox4.fxml" afterPath="$PROJECT_DIR$/out/production/AvangardGUI/fxml/HBox4.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/BeakerController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/BeakerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/HBox3Controller.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/HBox3Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/HBox4Controller.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/HBox4Controller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/VBoxController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/VBoxController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/HBox4.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/HBox4.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/beaker.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/beaker.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,38 +90,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VBoxController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/VBoxController.java">
+      <file leaf-file-name="BeakerController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/BeakerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.82857144">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.51428574">
+              <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HBox3Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/HBox3Controller.java">
+      <file leaf-file-name="HBox4Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/HBox4Controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LedController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LedController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,13 +137,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/BeakerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/FunLevelGauge.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/HBox4Controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/HBox1.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/HBox2.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/HBox4.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/beaker.fxml" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/HBox1Controller.java" />
@@ -156,8 +151,11 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/LedController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/HBox3.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/HBox4.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/VBoxController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/HBox3Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/HBox4Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/BeakerController.java" />
       </list>
     </option>
   </component>
@@ -1159,16 +1157,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/HBox1Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="160" column="28" selection-start-line="160" selection-start-column="28" selection-end-line="160" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/HBox2Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1199,17 +1187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/HBox4.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.031468533">
-          <caret line="26" column="193" selection-start-line="26" selection-start-column="193" selection-end-line="26" selection-end-column="193" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/beaker.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1232,28 +1209,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/BeakerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31428573">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/HBox4Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/css/VBox.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6327212">
           <caret line="177" column="37" selection-start-line="177" selection-start-column="37" selection-end-line="177" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1286,30 +1246,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/HBox4.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LedController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.7867133">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/HBox3Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <caret line="51" column="49" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1318,11 +1269,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/VBoxController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82857144">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="162" column="48" selection-start-line="162" selection-start-column="48" selection-end-line="162" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/HBox1Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LedController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.54285717">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/HBox4Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/BeakerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51428574">
+          <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

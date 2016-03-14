@@ -2,9 +2,12 @@ package controllers;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.text.Text;
 
@@ -15,6 +18,12 @@ import java.util.ResourceBundle;
  * Created by oleg on 11.03.16.
  */
 public class VBoxController implements Initializable {
+
+    @FXML
+    private RadioButton radioButton_Pumps;
+
+    @FXML
+    private  RadioButton radioButton_Injectors;
 
     @FXML
     private ProgressBar progress_bar_adjusting;
@@ -31,6 +40,8 @@ public class VBoxController implements Initializable {
     @FXML
     private ToggleButton  toggle_button_start;
 
+    private  HBox3Controller hBox3Controller;
+    private  HBox4Controller hBox4Controller;
 
     public void startProcess(){
 
@@ -40,7 +51,6 @@ public class VBoxController implements Initializable {
          * get instance of HBox3Controller
          * and set-up its child nodes
          * */
-        HBox3Controller hBox3Controller = HBox3Controller.getInstance();
         hBox3Controller.led_beaker_1_Controller.LedBlinkStart();
         hBox3Controller.led_beaker_2_Controller.LedBlinkStart();
         hBox3Controller.led_beaker_3_Controller.LedBlinkStart();
@@ -59,7 +69,6 @@ public class VBoxController implements Initializable {
          * get instance of HBox3Controller
          * and set-up its child nodes
          * */
-        HBox3Controller hBox3Controller = HBox3Controller.getInstance();
         hBox3Controller.led_beaker_1_Controller.LedBlinkStop();
         hBox3Controller.led_beaker_2_Controller.LedBlinkStop();
         hBox3Controller.led_beaker_3_Controller.LedBlinkStop();
@@ -72,6 +81,15 @@ public class VBoxController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        /**
+         * Get controllers of panels
+         *
+         * */
+
+        hBox3Controller = HBox3Controller.getInstance();
+        hBox4Controller = HBox4Controller.getInstance();
+
 
         /**
          * Initialize ProgressBars
@@ -123,6 +141,31 @@ public class VBoxController implements Initializable {
         });
 
 
-        }
+        /**
+         * Initialize RadioButtons
+         *
+         * radio - Pump, Injectors
+         *
+         */
+
+        radioButton_Pumps.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                hBox4Controller.selectTabPump();
+
+            }
+        });
+
+        radioButton_Injectors.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
+                hBox4Controller.selectTabFlow();
+            }
+        });
+
+
+
     }
+}
 

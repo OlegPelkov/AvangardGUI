@@ -7,11 +7,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="beaker_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="257.0" prefWidth="101.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BeakerController">
+<AnchorPane fx:id="beaker_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="101.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BeakerController">
    <children>
-      <Ellipse fx:id="ellipse_bottom_beaker" fill="DODGERBLUE" layoutX="51.0" layoutY="226.0" radiusX="35.0" radiusY="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="16.0" AnchorPane.topAnchor="211.0" />
       <Rectangle fx:id="rectangle_beaker" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="192.0" layoutX="16.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="70.0" AnchorPane.bottomAnchor="31.0" AnchorPane.topAnchor="34.0" />
       <Ellipse fx:id="ellipse_top_beaker" fill="DODGERBLUE" layoutX="51.0" layoutY="36.0" radiusX="35.0" radiusY="11.0" stroke="#7f7abf" strokeType="INSIDE" AnchorPane.bottomAnchor="210.0" AnchorPane.topAnchor="25.0" />
+      <Ellipse fx:id="ellipse_bottom_beaker" fill="DODGERBLUE" layoutX="51.0" layoutY="226.0" radiusX="35.0" radiusY="15.0" stroke="#7f7abf" strokeType="INSIDE" AnchorPane.bottomAnchor="16.0" AnchorPane.topAnchor="211.0" />
       <Rectangle fx:id="rectangle_fuel" arcHeight="5.0" arcWidth="5.0" fill="#1fffb4" height="106.0" layoutX="19.0" layoutY="117.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="64.0" AnchorPane.bottomAnchor="34.0" AnchorPane.topAnchor="114.0" />
       <Ellipse fx:id="ellipse_bottom_fuel" fill="#1fffb4" layoutX="51.0" layoutY="220.0" radiusX="32.0" radiusY="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="22.0" AnchorPane.topAnchor="205.0" />
       <Ellipse fx:id="ellipse_top_fuel" fill="#2eb586" layoutX="51.0" layoutY="115.0" radiusX="32.0" radiusY="11.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="131.0" AnchorPane.topAnchor="104.0" />

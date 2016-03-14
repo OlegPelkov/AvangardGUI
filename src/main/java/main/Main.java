@@ -11,6 +11,7 @@ import org.controlsfx.control.StatusBar;
 public class Main extends Application {
 
     public HBox3Controller hBox3Controller;
+    public HBox4Controller hBox4Controller;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -40,9 +41,9 @@ public class Main extends Application {
 
 
         fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/HBox4.fxml"));
+        hBox4Controller = HBox4Controller.getInstance();
+        fxmlLoader.setController(hBox4Controller);
         StackPane hBoxLayout4 = (StackPane) fxmlLoader.load();
-
-        HBox4Controller hBox4_Controller  =  fxmlLoader.getController();
 
         fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/VBoxBackground.fxml"));
         VBox vBoxBackground = (VBox) fxmlLoader.load();
