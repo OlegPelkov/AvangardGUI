@@ -21,7 +21,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="true" prefHeight="742.0" prefWidth="320.0" style="" styleClass="pane" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VBoxController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="true" prefHeight="742.0" prefWidth="320.0" style="" styleClass="pane" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <VBox alignment="CENTER" cache="false" fillWidth="false" mouseTransparent="false" prefHeight="635.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -79,8 +79,8 @@
                 <Group id="Group" scaleX="1.0" scaleY="1.0" VBox.vgrow="ALWAYS">
                     <children>
                         <TextField fx:id="modelTextField" layoutX="168.0" layoutY="-31.0" prefHeight="20.99990077486291" prefWidth="159.0" styleClass="modelTextField" stylesheets="@../css/VBox.css" text="095000-052#" />
-                        <ListView fx:id="modelList" layoutX="168.0" layoutY="1.0" prefHeight="149.0" prefWidth="159.0" styleClass="modelList" stylesheets="@../css/VBox.css" />
-                        <ListView fx:id="vendorList" layoutX="42.0" layoutY="-31.0" prefHeight="182.0" prefWidth="124.0" styleClass="vendorList" stylesheets="@../css/VBox.css" />
+                        <ListView fx:id="modelList" layoutX="168.0" layoutY="1.0" prefHeight="149.0" prefWidth="159.0" stylesheets="@../css/VBox.css" />
+                        <ListView fx:id="vendorList" layoutX="42.0" layoutY="-31.0" prefHeight="182.0" prefWidth="124.0" stylesheets="@../css/VBox.css" />
                     </children>
                     <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
@@ -114,7 +114,7 @@
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                 </GridPane>
-                <ListView fx:id="testList" pickOnBounds="true" prefHeight="158.0" prefWidth="285.0" styleClass="testList" stylesheets="@../css/VBox.css" VBox.vgrow="ALWAYS">
+                <ListView fx:id="testList" pickOnBounds="true" prefHeight="158.0" prefWidth="285.0" stylesheets="@../css/VBox.css" VBox.vgrow="ALWAYS">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>

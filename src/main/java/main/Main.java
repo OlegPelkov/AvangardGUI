@@ -10,6 +10,7 @@ import org.controlsfx.control.StatusBar;
 
 public class Main extends Application {
 
+    public VBoxController vBoxController;
     public HBox3Controller hBox3Controller;
     public HBox4Controller hBox4Controller;
 
@@ -20,9 +21,9 @@ public class Main extends Application {
         StackPane rootLayout = (StackPane) fxmlLoader.load();
 
         fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/VBox.fxml"));
+        vBoxController = VBoxController.getInstance();
+        fxmlLoader.setController(vBoxController);
         AnchorPane vBoxlayout  = (AnchorPane) fxmlLoader.load();
-
-        VBoxController vBox_Controller = fxmlLoader.getController();
 
         fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/HBox1.fxml"));
         StackPane hBoxLayout1 = (StackPane) fxmlLoader.load();

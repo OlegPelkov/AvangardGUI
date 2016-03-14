@@ -71,6 +71,8 @@ public class HBox4Controller implements Initializable {
     @FXML
     private GridPane gridPane_Beakers_flow_recovery;
 
+    private VBoxController vBoxController;
+
     public  AnchorPane beaker_flow_delivery_1;
     public  AnchorPane beaker_flow_delivery_2;
     public  AnchorPane beaker_flow_delivery_3;
@@ -120,9 +122,25 @@ public class HBox4Controller implements Initializable {
 
     }
 
+    public void updateBeakers(){
+
+        if(vBoxController.getSelectedTest().equals("testDisable")){
+
+        }
+
+
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+
+        /**
+         * get controllers
+         *
+         * * */
+
+        vBoxController = VBoxController.getInstance();
 
         /**
          * Load delivery beakers

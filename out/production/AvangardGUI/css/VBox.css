@@ -918,14 +918,12 @@
 
 }
 
-
-
 /***************
-*vendorList
+*list-view
 ****************/
 
 
-.vendorList{
+.list-view{
 
     -textFont-color: #ffff66;
     -background-color: #1f1f2e;
@@ -943,7 +941,8 @@
 
 }
 
-.vendorList:hover
+
+.list-view:hover
 {
     -fx-background-color: -borderHover-color ,transparent ,-background-color;
     -fx-background-insets: 0 0 0 0, 0, 1, 2;
@@ -951,7 +950,7 @@
 
 }
 
-.vendorList:focused {
+.list-view:focused {
 
     -fx-background-color: -borderSelect-color , transparent ,-background-color;
     -fx-background-insets: 0 0 0 0, 0, 1, 2;
@@ -960,7 +959,7 @@
 
 }
 
-.vendorList:selected{
+.list-view:selected{
 
     -fx-background-color: -borderSelect-color , transparent ,-background-color;
     -fx-background-insets: 0 0 0 0, 0, 1, 2;
@@ -969,61 +968,23 @@
 
 }
 
-/***************
- *modelList
- ****************/
+.list-view *.scroll-bar:vertical {
 
- .modelList{
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0 0 0 3;
 
-     -textFont-color: #ffff66;
-     -background-color: #1f1f2e;
-     -border-color: #4d2600;
-     -borderSelect-color: #b35900;
-     -borderHover-color: #b34700;
+}
 
-     -fx-background-color:  -border-color, transparent ,-background-color;
-     -fx-background-insets: 0 0 0 0, 0, 1, 2;
-     -fx-border-width: 2px ;
-     -fx-font-size: 12pt;
-     -fx-font-family: "Arial";
-     -fx-text-fill:-textFont-color;
-     -fx-opacity: 0.7;
+.list-view *.scroll-bar:horizontal{
 
- }
+    -fx-background-insets: 0, 1 0 0 0;
+    -fx-padding: 0 0 -1 -1;
 
- .modelList:hover
- {
-     -fx-background-color: -borderHover-color ,transparent ,-background-color;
-     -fx-background-insets: 0 0 0 0, 0, 1, 2;
-     -fx-border-width: 2px ;
+}
 
- }
-
- .modelList:focused {
-
-     -fx-background-color: -borderSelect-color , transparent ,-background-color;
-     -fx-background-insets: 0 0 0 0, 0, 1, 2;
-     -fx-border-width: 2px ;
-     -fx-opacity: 1;
-
- }
-
- .modelList:selected{
-
-     -fx-background-color: -borderSelect-color , transparent ,-background-color;
-     -fx-background-insets: 0 0 0 0, 0, 1, 2;
-     -fx-border-width: 2px ;
-     -fx-opacity: 1;
-
- }
-
-
-/***************
-*testList
-****************/
-
-
-.testList{
+.list-cell {
 
     -textFont-color: #ffff66;
     -background-color: #1f1f2e;
@@ -1031,7 +992,7 @@
     -borderSelect-color: #b35900;
     -borderHover-color: #b34700;
 
-    -fx-background-color:  -border-color, transparent ,-background-color;
+    -fx-background-color: transparent , transparent ,-background-color;
     -fx-background-insets: 0 0 0 0, 0, 1, 2;
     -fx-border-width: 2px ;
     -fx-font-size: 12pt;
@@ -1041,32 +1002,46 @@
 
 }
 
-.testList:hover
-{
-    -fx-background-color: -borderHover-color ,transparent ,-background-color;
-    -fx-background-insets: 0 0 0 0, 0, 1, 2;
-    -fx-border-width: 2px ;
+.list-cell:focused {
+
+    -border-color: #4d2600;
+    -fx-background-insets: 0, 1.4;
+    -fx-background-color: -border-color, -border-color;
 
 }
 
-.testList:focused {
+/*.list-cell:odd {
 
-    -fx-background-color: -borderSelect-color , transparent ,-background-color;
-    -fx-background-insets: 0 0 0 0, 0, 1, 2;
-    -fx-border-width: 2px ;
+    -border-color: #4d2600;
+    -fx-background-insets: 0, 1.4;
+    -fx-background-color: -border-color, transparent;
+}*/
+
+/*.list-cell:focused:odd {
+
+      -border-color: #4d2600;
+      -fx-background-insets: 0, 1.4;
+      -fx-background-color: -border-color, -border-color;
+
+}*/
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+
+    -bar-color: #19334d;
+    -fx-background-color: -bar-color;
     -fx-opacity: 1;
 
 }
 
-.testList:selected{
 
-    -fx-background-color: -borderSelect-color , transparent ,-background-color;
-    -fx-background-insets: 0 0 0 0, 0, 1, 2;
-    -fx-border-width: 2px ;
-    -fx-opacity: 1;
+
+.list-view:horizontal *.list-cell:filled:selected {
+
+    -border-color: #4d2600;
+    -fx-background-insets: 0, 1.4;
+    -fx-background-color: -border-color, -border-color;
 
 }
-
 
 
 /***************
