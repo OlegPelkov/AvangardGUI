@@ -15,6 +15,11 @@ import java.util.ResourceBundle;
 public class HBox3Controller  implements Initializable {
 
 
+    /**
+     *
+     * Make as singltone
+     *
+     * */
     private static HBox3Controller instance = null;
 
     private HBox3Controller(){

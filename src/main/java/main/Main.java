@@ -22,7 +22,6 @@ public class Main extends Application {
         AnchorPane vBoxlayout  = (AnchorPane) fxmlLoader.load();
 
         VBoxController vBox_Controller = fxmlLoader.getController();
-        vBox_Controller.setMainApp(this);
 
         fxmlLoader =  new FXMLLoader(getClass().getResource("/fxml/HBox1.fxml"));
         StackPane hBoxLayout1 = (StackPane) fxmlLoader.load();

@@ -7,7 +7,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.text.Text;
-import main.Main;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -33,36 +32,40 @@ public class VBoxController implements Initializable {
     private ToggleButton  toggle_button_start;
 
 
-    private Main mainApp;
-
-    public void setMainApp(Main mainApp) {
-        this.mainApp = mainApp;
-    }
-
     public void startProcess(){
 
         progress_bar_adjusting.setProgress(0.2);
         progress_bar_measuring.setProgress(0.8);
-        HBox3Controller.getInstance().led_beaker_1_Controller.LedBlinkStart();
-        /*mainApp.hBox3Controller.led_beaker_2_Controller.LedBlinkStart();
-        mainApp.hBox3Controller.led_beaker_3_Controller.LedBlinkStart();
-        mainApp.hBox3Controller.led_beaker_4_Controller.LedBlinkStart();
-        mainApp.hBox3Controller.led_beaker_5_Controller.LedBlinkStart();
-        mainApp.hBox3Controller.led_beaker_6_Controller.LedBlinkStart();
+        /**
+         * get instance of HBox3Controller
+         * and set-up its child nodes
+         * */
+        HBox3Controller hBox3Controller = HBox3Controller.getInstance();
+        hBox3Controller.led_beaker_1_Controller.LedBlinkStart();
+        hBox3Controller.led_beaker_2_Controller.LedBlinkStart();
+        hBox3Controller.led_beaker_3_Controller.LedBlinkStart();
+        hBox3Controller.led_beaker_4_Controller.LedBlinkStart();
+        hBox3Controller.led_beaker_5_Controller.LedBlinkStart();
+        hBox3Controller.led_beaker_6_Controller.LedBlinkStart();
 
-*/
     }
 
     public void stopProcess(){
 
         progress_bar_adjusting.setProgress(0);
         progress_bar_measuring.setProgress(0.1);
-        HBox3Controller.getInstance().led_beaker_1_Controller.LedBlinkStop();
-  /*      mainApp.hBox3Controller.led_beaker_2_Controller.LedBlinkStop();
-        mainApp.hBox3Controller.led_beaker_3_Controller.LedBlinkStop();
-        mainApp.hBox3Controller.led_beaker_4_Controller.LedBlinkStop();
-        mainApp.hBox3Controller.led_beaker_5_Controller.LedBlinkStop();
-        mainApp.hBox3Controller.led_beaker_6_Controller.LedBlinkStop();*/
+        progress_bar_measuring.setProgress(0.8);
+        /**
+         * get instance of HBox3Controller
+         * and set-up its child nodes
+         * */
+        HBox3Controller hBox3Controller = HBox3Controller.getInstance();
+        hBox3Controller.led_beaker_1_Controller.LedBlinkStop();
+        hBox3Controller.led_beaker_2_Controller.LedBlinkStop();
+        hBox3Controller.led_beaker_3_Controller.LedBlinkStop();
+        hBox3Controller.led_beaker_4_Controller.LedBlinkStop();
+        hBox3Controller.led_beaker_5_Controller.LedBlinkStop();
+        hBox3Controller.led_beaker_6_Controller.LedBlinkStop();
 
     }
 
@@ -112,8 +115,9 @@ public class VBoxController implements Initializable {
                     startProcess();
 
                 } else {
-                    stopProcess();
                     toggle_button_start.setText("Stop");
+                    stopProcess();
+
                 }
             }
         });
